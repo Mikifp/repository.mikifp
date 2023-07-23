@@ -4,12 +4,3 @@
 [submodule "repo/script.fentastic.helper.miki"]
 	path = repo/script.fentastic.helper.miki
 	url = https://github.com/Mikifp/script.fentastic.helper.miki
-[submodule "script.fentastic.helper"]
-	path = script.fentastic.helper
-	url = https://github.com/ivarbrandt/script.fentastic.helper
-[submodule "repo/service.subskip"]
-	path = repo/service.subskip
-	url = https://github.com/drinfernoo/service.subskip
-[submodule "repo/repository.ivarbrandt"]
-	path = repo/repository.ivarbrandt
-	url = https://github.com/ivarbrandt/repository.ivarbrandt
