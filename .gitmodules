@@ -7,3 +7,6 @@
 [submodule "script.fentastic.helper"]
 	path = script.fentastic.helper
 	url = https://github.com/ivarbrandt/script.fentastic.helper
+[submodule "repo/service.subskip"]
+	path = repo/service.subskip
+	url = https://github.com/drinfernoo/service.subskip
