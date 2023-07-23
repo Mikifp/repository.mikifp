@@ -10,3 +10,6 @@
 [submodule "repo/service.subskip"]
 	path = repo/service.subskip
 	url = https://github.com/drinfernoo/service.subskip
+[submodule "repo/repository.ivarbrandt"]
+	path = repo/repository.ivarbrandt
+	url = https://github.com/ivarbrandt/repository.ivarbrandt
