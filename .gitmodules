@@ -1,8 +1,0 @@
-[submodule "repo/skin.fentastic.miki"]
-	path = repo/skin.fentastic.miki
-	url = https://github.com/Mikifp/skin.fentastic.miki
-	branch = master
-[submodule "repo/script.fentastic.miki.helper"]
-	path = repo/script.fentastic.miki.helper
-	url = https://github.com/Mikifp/script.fentastic.miki.helper
-	branch = master
