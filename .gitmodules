@@ -1,6 +1,6 @@
 [submodule "repo/skin.fentastic.miki"]
 	path = repo/skin.fentastic.miki
-	url = https://github.com/Mikifp/skin.fentastic.miki
+	url = git submodule add https://github.com/Mikifp/skin.fentastic.miki/tree/main
 [submodule "repo/script.fentastic.helper.miki"]
 	path = repo/script.fentastic.helper.miki
-	url = https://github.com/Mikifp/script.fentastic.helper.miki
+	url = https://github.com/Mikifp/script.fentastic.miki.helper/tree/main
