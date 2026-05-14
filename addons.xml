@@ -1,0 +1,492 @@
+<?xml version='1.0' encoding='utf-8'?>
+<addons><addon id="plugin.program.mikiwizard" name="[COLOR limegreen]Miki[/COLOR]Wizard" version="1.0.0" provider-name="mikifp">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
+        <import addon="script.speedtester" optional="true" version="1.1.2" />
+    </requires>
+    
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    
+    <extension point="xbmc.service" library="startup.py" start="startup" />
+    
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">[COLOR limegreen]Miki[/COLOR]Wizard</summary>
+        <description lang="en">[COLOR limegreen]Miki[/COLOR]Wizard offers many maintenance features, selective add-on data saving, and automated build installs.</description>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <source>https://github.com/Mikifp/plugin.program.mikiwizard</source>
+        <news>
+1.4.9
+ - Fix Error Related to Log
+1.4.8
+ - Fix regex for formatting tags
+ - Fix theme selection after build install
+ - Fix downloading into invalid path
+1.4.7
+ - Don't show Matrix builds in previous versions
+1.4.6
+ - Use Speed Tester add-on from official repo
+1.4.5
+ - Fix bugs with unintended files being cleared
+1.4.4
+ - Transfer ownership
+1.4.3
+ - Fix missing artwork on items (thanks @xulek)
+1.4.2
+ - A few bug fixes
+1.4.1
+ - Fix crash on fresh installs
+1.4.0
+ - Fix APK Installer
+ - Convert official APK downloader to use official script
+ - Add scrollbar to Save Data dialog
+ - Fix skin path in build info
+1.3.7
+ - Fix import lock error
+1.3.6
+ - Fix notifications
+ - Cleanup log files
+1.3.5
+ - Add Fen
+ - Add Shadow
+ - Fix restoring saved data every boot
+1.3.4
+ - Fix bad indent
+1.3.3
+ - Fix Unicode characters in notification window
+1.3.2
+ - Fix build restore
+1.3.1
+ - Fix "Keep Login Info" menu        
+1.3.0
+ - Fix formatting of saved restore times
+ - Fix local build zip being deleted on restore
+ - Add YouTube API saving
+ - Remove broken context menus
+ - Fix repeating dialogs from shortcuts/favorites
+ - Remove "Normal Install" option
+ - Add "Logging Tools" menu
+ - Add option to save guisettings.xml
+ - Add TMDbHelper Fanart.tv saving
+ - More fixes for OS X
+ - Fix Seren Fanart.tv saving
+1.2.9
+ - Fix NuMb3r5 cache clearing
+ - Fix hang during repo force check
+ - Fix logins being restored every startup
+ - Fix some file permission errors
+ - Fix OS X backup errors
+1.2.8
+ - Add Gaia PM OAuth
+ - Fix binary add-on restoration
+ - Fix some issues with old settings
+ - Fix timing on many startup tasks
+1.2.7
+ - Add TheMovieDb Helper
+1.2.6
+ - Fix Seren PM OAuth    
+1.2.5
+ - Fix typo in debridit.py
+1.2.4
+ - Cover more edge cases during binary detection
+1.2.3
+ - Fix notification ID bug
+1.2.2
+ - Add Seren PM OAuth
+ - Add AllDebrid spport for Gaia, Seren, ResolveURL, and URLResolver
+1.2.1
+ - General bug fixes
+1.2.0
+ - Silence save data notifications on startup
+ - Fix Addon Installer menu
+ - Convert addons.txt to JSON format
+1.1.1
+ - Fix error on advancedsettings categories
+1.1.0
+ - Add back advancedsettings area under System Tweaks/Fixes
+ - Rudimentary version of advancedsettings editor. Can currently only handle editing pre-existing tags under 'cache' and 'network'.
+ - Convert advanced.txt to JSON format
+ - Add "built-in" advancedsettings.xml presets
+1.0.3
+ - Update artwork
+ - Fix rare issues with URLs not working
+ - Fix repetitive build prompt (again)
+ - Fix builds downloading twice
+ - Fix title coloring on notifications
+ - Fix auto repo install
+ - Fix first run settings not being respected
+1.0.2
+ - Fix crash in login menu
+ - Fix auto install repo
+1.0.1
+ - Fix double startup
+ - Fix repetitive build prompt
+ - Fix main menu not opening on Krypton
+ - Fix notification timeout
+ - Fix crash in Trakt menu
+1.0.0
+ - Initial Commit
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+        </assets>
+    </extension>
+</addon><addon id="plugin.program.mikiwizard2" name="[COLOR limegreen]Miki[/COLOR]Wizard" version="1.1.0" provider-name="mikifp">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="script.module.requests" />
+        <import addon="script.module.six" />
+        <import addon="script.kodi.android.update" optional="true" version="1.1.7" />
+        <import addon="script.speedtester" optional="true" version="1.1.2" />
+    </requires>
+    
+    <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>executable</provides>
+    </extension>
+    
+    <extension point="xbmc.service" library="startup.py" start="startup" />
+    
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">[COLOR limegreen]Miki[/COLOR]Wizard</summary>
+        <description lang="en">[COLOR limegreen]Miki[/COLOR]Wizard offers many maintenance features, selective add-on data saving, and automated build installs.</description>
+        <platform>all</platform>
+        <reuselanguageinvoker>false</reuselanguageinvoker>
+        <source>https://github.com/Mikifp/plugin.program.mikiwizard</source>
+        <news>
+1.4.9
+ - Fix Error Related to Log
+1.4.8
+ - Fix regex for formatting tags
+ - Fix theme selection after build install
+ - Fix downloading into invalid path
+1.4.7
+ - Don't show Matrix builds in previous versions
+1.4.6
+ - Use Speed Tester add-on from official repo
+1.4.5
+ - Fix bugs with unintended files being cleared
+1.4.4
+ - Transfer ownership
+1.4.3
+ - Fix missing artwork on items (thanks @xulek)
+1.4.2
+ - A few bug fixes
+1.4.1
+ - Fix crash on fresh installs
+1.4.0
+ - Fix APK Installer
+ - Convert official APK downloader to use official script
+ - Add scrollbar to Save Data dialog
+ - Fix skin path in build info
+1.3.7
+ - Fix import lock error
+1.3.6
+ - Fix notifications
+ - Cleanup log files
+1.3.5
+ - Add Fen
+ - Add Shadow
+ - Fix restoring saved data every boot
+1.3.4
+ - Fix bad indent
+1.3.3
+ - Fix Unicode characters in notification window
+1.3.2
+ - Fix build restore
+1.3.1
+ - Fix "Keep Login Info" menu        
+1.3.0
+ - Fix formatting of saved restore times
+ - Fix local build zip being deleted on restore
+ - Add YouTube API saving
+ - Remove broken context menus
+ - Fix repeating dialogs from shortcuts/favorites
+ - Remove "Normal Install" option
+ - Add "Logging Tools" menu
+ - Add option to save guisettings.xml
+ - Add TMDbHelper Fanart.tv saving
+ - More fixes for OS X
+ - Fix Seren Fanart.tv saving
+1.2.9
+ - Fix NuMb3r5 cache clearing
+ - Fix hang during repo force check
+ - Fix logins being restored every startup
+ - Fix some file permission errors
+ - Fix OS X backup errors
+1.2.8
+ - Add Gaia PM OAuth
+ - Fix binary add-on restoration
+ - Fix some issues with old settings
+ - Fix timing on many startup tasks
+1.2.7
+ - Add TheMovieDb Helper
+1.2.6
+ - Fix Seren PM OAuth    
+1.2.5
+ - Fix typo in debridit.py
+1.2.4
+ - Cover more edge cases during binary detection
+1.2.3
+ - Fix notification ID bug
+1.2.2
+ - Add Seren PM OAuth
+ - Add AllDebrid spport for Gaia, Seren, ResolveURL, and URLResolver
+1.2.1
+ - General bug fixes
+1.2.0
+ - Silence save data notifications on startup
+ - Fix Addon Installer menu
+ - Convert addons.txt to JSON format
+1.1.1
+ - Fix error on advancedsettings categories
+1.1.0
+ - Add back advancedsettings area under System Tweaks/Fixes
+ - Rudimentary version of advancedsettings editor. Can currently only handle editing pre-existing tags under 'cache' and 'network'.
+ - Convert advanced.txt to JSON format
+ - Add "built-in" advancedsettings.xml presets
+1.0.3
+ - Update artwork
+ - Fix rare issues with URLs not working
+ - Fix repetitive build prompt (again)
+ - Fix builds downloading twice
+ - Fix title coloring on notifications
+ - Fix auto repo install
+ - Fix first run settings not being respected
+1.0.2
+ - Fix crash in login menu
+ - Fix auto install repo
+1.0.1
+ - Fix double startup
+ - Fix repetitive build prompt
+ - Fix main menu not opening on Krypton
+ - Fix notification timeout
+ - Fix crash in Trakt menu
+1.0.0
+ - Initial Commit
+        </news>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.png</fanart>
+        </assets>
+    </extension>
+</addon><addon id="repository.addons4kodi" name="Addons4Kodi Repository" version="2.1" provider-name="A4K">
+	<extension point="xbmc.addon.repository" name="Addons4Kodi Repository">
+        <dir minversion="18.0">
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.addons4kodi/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.addons4kodi/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.addons4kodi/master/zips/</datadir>
+        </dir>
+        <dir minversion="18.0" maxversion="18.9.9">
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openscrapers/master/zips/</datadir>
+        </dir>
+        <dir minversion="18.0" maxversion="18.9.9">
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/leia/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/leia/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/leia/zips/</datadir>
+        </dir>
+        <dir minversion="19.0">
+            <info compressed="false">https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/matrix/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/a4k-openproject/repository.openwizard/master/matrix/zips/</datadir>
+        </dir>
+        <dir minversion="18.0">
+            <info>https://raw.githubusercontent.com/newt-sc/a4kStreaming/master/packages/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/newt-sc/a4kStreaming/master/packages/addons.xml.crc</checksum>
+            <datadir>https://github.com/newt-sc/a4kStreaming/archive</datadir>
+            <artdir>https://github.com/newt-sc/a4kStreaming/releases/download/v0.1.0</artdir>
+        </dir>
+        <dir minversion="18.0">
+            <info>https://raw.githubusercontent.com/newt-sc/a4kSubtitles/master/packages/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/newt-sc/a4kSubtitles/master/packages/addons.xml.crc</checksum>
+            <datadir>https://github.com/newt-sc/a4kSubtitles/archive</datadir>
+            <artdir>https://github.com/a4k-openproject/a4kSubtitles/releases/download/v0.0.13</artdir>
+        </dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Addons4Kodi Repository</summary>
+		<description>The official repo of /r/Addons4Kodi!.</description>
+		<disclaimer />
+		<platform>all</platform>
+	</extension>
+</addon><addon id="repository.autowidget" name="AutoWidget Repository" version="1.1" provider-name="drinfernoo">
+    <extension point="xbmc.addon.repository" name="AutoWidget Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/drinfernoo/plugin.program.autowidget/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/drinfernoo/plugin.program.autowidget/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/drinfernoo/plugin.program.autowidget/repo/zips/</datadir>
+        </dir>
+    </extension>
+    
+    <extension point="xbmc.addon.metadata">
+        <summary>AutoWidget</summary>
+        <description>The official home of AutoWidget.</description>
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="repository.cocoscrapers" name="CocoScrapers Repository" version="1.0.1" provider-name="CocoScrapers">
+    <extension point="xbmc.addon.repository" name="CocoScrapers Repository">
+        <dir minversion="19.0">
+            <info compressed="false">https://raw.githubusercontent.com/not-coco-joe/repository.cocoscrapers/master/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/not-coco-joe/repository.cocoscrapers/master/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/not-coco-joe/repository.cocoscrapers/master/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>CocoScrapers Repository</summary>
+        <description>Unofficial add-ons repository</description>
+    </extension>
+</addon><addon id="repository.ivarbrandt" name="ivarbrandt's Repository" version="1.0.1" provider-name="Ivar Brandt">
+    <extension point="xbmc.addon.repository" name="ivarbrandt's Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/ivarbrandt/repository.ivarbrandt/master/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/ivarbrandt/repository.ivarbrandt/master/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/ivarbrandt/repository.ivarbrandt/master/repo/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>ivarbrandt's Repository</summary>
+        <description>Kodi repository for the FENtastic skin and other projects</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="repository.jurialmunkey" name="jurialmunkey Alpha Repository" version="3.3" provider-name="jurialmunkey">
+    <extension point="xbmc.addon.repository" name="jurialmunkey Alpha Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/repo/zips/</datadir>
+        </dir>
+		<dir minversion="18.0" maxversion="18.9.0">
+            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/leia/zips/</datadir>
+        </dir>
+        <dir minversion="18.9.0" maxversion="19.9.0">
+            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/matrix/zips/</datadir>
+        </dir>
+        <dir minversion="19.9.1">
+            <info compressed="false">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/nexusrepo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/nexusrepo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/jurialmunkey/repository.jurialmunkey/master/nexusrepo/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>jurialmunkey Alpha Repository</summary>
+        <description>A repository for alpha releases of jurialmunkey's skins.</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+        </assets>
+    </extension>
+</addon><addon id="repository.mikifp" name="Mikifp Repository" version="3.1" provider-name="mikifp">
+    <extension point="xbmc.addon.repository" name="Example Repository">
+        <dir>
+            <info compressed="false">https://raw.githubusercontent.com/mikifp/repository.mikifp/master/repo/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/Mikifp/repository.mikifp/master/repo/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/mikifp/repository.mikifp/master/repo/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Mikifp's Repository</summary>
+        <description>My Kodi repository</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon><addon id="repository.nixgates" name="Nixgates Repo" version="2.2.0" provider-name="Nixgates">
+	<extension point="xbmc.addon.repository" name="Nixgates Repo">
+		<dir minversion="18.0">
+			<info compressed="false">https://raw.githubusercontent.com/nixgates/nixgates/master/repo/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/nixgates/nixgates/master/repo/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/nixgates/nixgates/master/repo/zips/</datadir>
+		</dir>
+		<dir minversion="18.0" maxversion="18.9.0">
+			<info compressed="false">https://raw.githubusercontent.com/nixgates/nixgates/master/leia/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/nixgates/nixgates/master/leia/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/nixgates/nixgates/master/leia/zips/</datadir>
+		</dir>
+		<dir minversion="18.9.0">
+			<info compressed="false">https://raw.githubusercontent.com/nixgates/nixgates/master/matrix/zips/addons.xml</info>
+			<checksum>https://raw.githubusercontent.com/nixgates/nixgates/master/matrix/zips/addons.xml.md5</checksum>
+			<datadir zip="true">https://raw.githubusercontent.com/nixgates/nixgates/master/matrix/zips/</datadir>
+		</dir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary>Nixgates</summary>
+		<description>Nixgates Repository</description>
+		<platform>all</platform>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.png</fanart>
+		</assets>
+	</extension>
+</addon><addon id="repository.slyguy" name="SlyGuy Repository" provider-name="SlyGuy" version="0.0.9">
+  <extension point="xbmc.addon.repository" name="SlyGuy Repository">
+    <dir>
+      <info compressed="false">https://slyguy.uk/.repo/repository.slyguy/addons.xml</info>
+      <checksum>https://slyguy.uk/.repo/repository.slyguy/addons.xml.md5</checksum>
+      <datadir zip="true">https://slyguy.uk/.repo/repository.slyguy/</datadir>
+    </dir>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <description lang="en">Addons by SlyGuy (slyguy.uk)</description>
+    <license />
+    <language />
+    <website />
+    <news />
+    <assets>
+      <icon>icon.png</icon>
+      <fanart>fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon><addon id="repository.umbrella" name="Umbrella Repository" version="2.2.6" provider-name="Umbrella">
+    <extension point="xbmc.addon.repository" name="Umbrella Repository">
+        <dir minversion="18.9.701" maxversion="19.5">
+            <info compressed="false">https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/matrix/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/matrix/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/matrix/zips/</datadir>
+        </dir>
+	    <dir minversion="19.8.0" maxversion="20.89.0">
+            <info compressed="false">https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/nexus/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/nexus/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/nexus/zips/</datadir>
+        </dir>
+		<dir minversion="20.90.0">
+            <info compressed="false">https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/omega/zips/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/omega/zips/addons.xml.md5</checksum>
+            <datadir zip="true">https://raw.githubusercontent.com/umbrellaplug/umbrellaplug.github.io/master/omega/zips/</datadir>
+        </dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Umbrella Repository</summary>
+        <description>Repository for the Umbrella video plugin.</description>
+        <disclaimer />
+        <platform>all</platform>
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+        </assets>
+    </extension>
+</addon></addons>
