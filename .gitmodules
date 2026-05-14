@@ -1,0 +1,3 @@
+[submodule "repo/plugin.program.mikiwizard"]
+	path = repo/plugin.program.mikiwizard
+	url = https://github.com/Mikifp/plugin.program.mikiwizard
