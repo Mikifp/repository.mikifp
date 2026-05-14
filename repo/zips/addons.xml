@@ -19,7 +19,7 @@
         <description lang="en">[COLOR limegreen]Miki[/COLOR]Wizard offers many maintenance features, selective add-on data saving, and automated build installs.</description>
         <platform>all</platform>
         <reuselanguageinvoker>false</reuselanguageinvoker>
-        <source>https://www.github.com/drinfernoo/plugin.program.openwizard/</source>
+        <source>https://github.com/Mikifp/plugin.program.mikiwizard</source>
         <news>
 1.4.9
  - Fix Error Related to Log
